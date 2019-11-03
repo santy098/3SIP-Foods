@@ -1,0 +1,85 @@
+.main-box{
+    color: white;
+    height: 80vh;
+    font-family: 'Righteous', cursive;
+}
+
+.body2{
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("img/background-main.jpg"); 
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+
+footer{
+        background-color: black;
+        font-size: 80%;
+        height: 30%;
+    }
+
+    .footer-nav {
+        list-style: none;
+        float: left;
+    }
+
+    .social-nav{
+        list-style: none;
+        float: right
+    }
+
+    .footer-nav li,
+    .social-nav li{
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .footer-nav li:last-child,
+    .social-nav li:last-child{
+        margin-right: 20px;
+    }
+    .footer-nav li a:link,
+    .footer-nav li a:visited,
+    .social-nav li a:link,
+    .social-nav li a:visited{
+        text-decoration: none;
+        color: #8e8e8e;
+        border: 0;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+    }
+    .footer-nav li a:active,
+    .footer-nav li a:hover,
+    .social-nav li a:active,
+    .social-nav li a:hover{
+        color:#c3c3c3;
+    }
+
+    ion-icon{
+        font-size: 250%;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+    }
+
+    .fb:active,
+    .fb:hover{
+        color:#3b5998;
+    }
+    .tw:active,
+    .tw:hover{
+        color:#1da1f2;
+    }
+    .gp:active,
+    .gp:hover{
+        color:#db4437;
+    }
+    .in:active,
+    .in:hover{
+        color:#c32aa3;
+    }
+
+    footer p{
+        font-size:90%;
+        margin: 20px auto 10px auto;
+        text-align: center;
+        color: #8e8e8e;
+    }
