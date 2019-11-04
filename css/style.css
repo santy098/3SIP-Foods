@@ -4,12 +4,27 @@
     font-family: 'Righteous', cursive;
 }
 
+.box{
+    padding:1%;
+}
+
+section{
+    padding: 80px 0;
+
+}
+
 .body2{
   background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("img/background-main.jpg"); 
   background-attachment: fixed;
   background-size: cover;
 }
 
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 70%;
+  margin: auto;
+}
 
 
 footer{
@@ -82,4 +97,18 @@ footer{
         margin: 20px auto 10px auto;
         text-align: center;
         color: #8e8e8e;
+    }
+
+
+
+
+    .section-features .long-copy{
+        margin-bottom: 30px;
+    }
+
+
+
+    .box p{
+        font-size: 90%;
+        line-height: 145%;
     }

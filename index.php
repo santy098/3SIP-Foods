@@ -56,11 +56,11 @@
 
         <div class="jumbotron main-box" style="background-color: rgba(0,0,0,0.0);border:0px;">
                         <div class="row">
-                            <div class="col-lg-12" style="font-family: 'Righteous', cursive;">
-                                <h1 class="display-4">Hungry? No more!</h1>
-                                <p class="lead">Your favourite food, delivered with love.</p><br><br>
+                            <div class="col-lg-12" >
+                                <h1 class="display-4"  style="font-family: 'Righteous', cursive;">Hungry? No more!</h1>
+                                <p class="lead"  style="font-family: 'Righteous', cursive;">Your favourite food, delivered with love.</p><br><br>
                                 <hr class="my-4">
-                                <p>Join Bengauru's biggest food community and get hassle free delivery to your doorstep.</p>
+                                <p>Join Bengaluru's biggest food community and get hassle free delivery to your doorstep.</p>
                                 <p class="lead">
                                     <?php if(isset($_SESSION['user_info']))
                                         echo "<a class='btn btn-success btn-lg' href='shopping.php' role='button' style='background-color: rgb(250, 91, 38);border:0px;'>Order now!</a>
@@ -82,46 +82,65 @@
         </div>
     </div>
 </div>
+              <br><br>
               
+              
+              <section class="section-features" id="features" style="color:white">
+                                                                
+                                                                <div class="row">
+                                                                  <center>
+                                                                    <h2>Get food fast &mdash; not fast food.</h2>
+                                                                    <p class="long-copy">
+                                                                        Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!
+                                                                    </p>
+                                                                    </center>
+                                                                </div>
+                                                    
+                                                            <div class="row js--wp-1">
+                                                                <div class="col-lg-3 box">
+                                                                    <i class="ion-ios-infinite-outline icon-big"></i>
+                                                                <h3>Up to 365 days/year</h3>
+                                                                    <p>
+                                                                    Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.</p>
+                                                    
+                                                                </div>
+                                                    
+                                                    
+                                                                <div class="col-lg-3 box">
+                                                                <i class="ion-ios-stopwatch-outline icon-big"></i>
+                                                                <h3>Ready in 20 minutes</h3>
+                                                                    <p>
+                                                                    You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.</p>
+                                                    
+                                                                </div>
+                                                    
+                                                                <div class="col-lg-3 box">
+                                                                <i class="ion-ios-nutrition-outline icon-big"></i>
+                                                                <h3>100% organic</h3>
+                                                                    <p>
+                                                                    All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!</p>
+                                                    
+                                                                </div>
+                                                    
+                                                                  <div class="col-lg-3 box">
+                                                                      <i class="ion-ios-cart-outline icon-big"></i>
+                                                                      <h3>Order anything</h3>                    
+                                                                    <p>
+                                                                    We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!</p>
+                                                    
+                                                                </div>
+                                                                
+                                                             </div>
+                                                                
+                                                          </section>
+              
+              
+              
+              
+              <br><br>
 
 
-                  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                      <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                      </ol>
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img class="d-block w-100" src="img/1-min.jpg" alt="First slide">
-                        </div>
-                        <div class="carousel-item">
-                          <img class="d-block w-100" src="img/2-min.jpg" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                          <img class="d-block w-100" src="img/3-min.jpg" alt="Third slide">
-                        </div>
-                      </div>
-                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
-                    </div>
-                    
-                      <!-- Left and right controls -->
-                      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
-                    </div>
+                 <?php include("carousel.php"); ?>
 
 <?php include("footer.php"); ?>
 

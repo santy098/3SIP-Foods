@@ -1,5 +1,5 @@
 <?php
-include("head.php");
+session_start();
 $conn = mysqli_connect("localhost","root","","foodies");
 if(!$conn)
 {  
@@ -157,12 +157,12 @@ if (isset($_POST['submit']))
 
     </script>
 </head>
-<body class="body2" style=" background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('img/background-main.jpg');">
+<body class="body2" style=" background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('img/background-main.jpg');">
        
-
+<center><br><img src="img/3sip_Ologo.png" style="height:200px;width:200px;display:block"></center>
               <div class="row">
                   <div class="col-lg-2"></div>
-                <div class="card col-lg-8" style="margin-top: 50px;background-color: rgba(0, 0, 0,0.7);width: 58rem;color: white;;">
+                <div class="card col-lg-8" style="margin-top: 20px;background-color: rgba(0, 0, 0,0.7);width: 58rem;color: white;;">
 
                     <div class="card-title" style="font-size:x-large;">Create a 3SIP account</div>
                         <form  name="register" method="post" action="register.php" onsubmit="return validate()">

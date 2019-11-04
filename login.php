@@ -1,6 +1,6 @@
 <?php
 
-include("head.php");
+session_start();
 
 error_reporting(0);
 
@@ -36,7 +36,7 @@ if(isset($_POST['']))
 
 </head>
 
-<body class="body2" style=" background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('img/background-main.jpg');">
+<body class="body2" style=" background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('img/background-main.jpg');">
 
 
 <?php
@@ -81,10 +81,11 @@ $_SESSION['userName'] = 'Root';		$_COOKIE['varname'] = 9;
        echo"<script>window.location.href='$ref'</script>";
         } else { ?>
 
-
+<center><br><img src="img/3sip_Ologo.png" style="height:200px;width:200px;display:block"></center>
               <div class="row">
-                  <div class="col-lg-3"></div>
-                        <div class="card" style="margin-left: 40px;margin-top: 50px;background-color: rgba(0, 0, 0, 0.7);width: 38rem;">
+                  <div class="col-lg-12"></div>
+                  
+                        <div class="card" style="left:30%;background-color: rgba(0, 0, 0, 0.8);width: 38rem;">
                             <form class="form col-lg-12" style="color: white;" id="login-form" class="login-form" name="form1" method="post" action="login.php">
                             <input type="hidden" name="is_login" value="1">
                                 <p style="font-size: 28px;" class="card-title">Log in</p>
