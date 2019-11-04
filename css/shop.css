@@ -6,6 +6,10 @@
   clear: both;  
 }
 
+body{
+    background-color: rgb(181, 181, 181);
+}
+
 #site-header, #site-footer {
     background: #fff;
 }
@@ -119,7 +123,7 @@ a:hover {
 
 .product header, .product .content {
     background-color: rgb(253, 253, 253);
-    border: 1px solid #ccc;
+    border: 0px solid #ccc;
     border-style: none none solid none;
     float: left;
 }
@@ -183,7 +187,7 @@ a:hover {
 
 .product footer.content {
     height: 50px;
-    margin: 6px 0 0 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -296,12 +300,12 @@ a:hover {
 }
 
 .btn {
-    background-color: white;
-    border: 1px solid #999;
+    background-color:rgb(1, 155, 1) ;
+    border: 0px solid #999;
     border-style: none none solid none;
     cursor: pointer;
     display: block;
-    color: black;
+    color: white;
     font-size: 20px;
     font-weight: 300;
     padding: 16px 0;
@@ -317,7 +321,7 @@ a:hover {
 
 .btn:hover {
     color: #fff;
-    background:black;
+    background:green;
 }
 
 .type {
@@ -328,7 +332,7 @@ a:hover {
 }
 
 .type, .color {
-    border: 1px solid #ccc;
+    border: 0px solid #ccc;
     border-style: none none solid none;
     position: absolute;
 }

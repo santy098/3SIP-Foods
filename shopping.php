@@ -43,7 +43,7 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
 
  
 </head>
-<body style="background:white;">
+<body style="background:rgb(181, 181, 181);">
     
     
     <form action="shopping.php" name="orderform" method="post">
@@ -365,7 +365,7 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
     </div>
 
 
-    <footer id="site-footer" style="background:rgb(250, 91, 38);">
+    <footer id="site-footer" style="">
         <div class="container clearfix">
 
             <div class="left">
@@ -381,7 +381,7 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
 
         </div>
     </footer>
-    </form>
+    </form><br><br><br>
     <?php include("footer.php");?>
 </body>
 </html>

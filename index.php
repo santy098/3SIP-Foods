@@ -1,4 +1,4 @@
-
+<?php session_start();?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,8 +15,46 @@
 
 <div class="row">
     <div class="col-lg-7">
-    <?php include("head.php") ?>
-        <div class="jumbotron main-box" style="background-color: rgba(0,0,0);border-radius:0px;">
+    
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(0, 0, 0);">
+                <a class="navbar-brand" href="index.php"><img src="img/3sip_Ologo.png" style="height: 100px;width: 100px;" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                    
+                    <a class="nav-item nav-link" href="help.php">Help</a>
+
+                                        
+                    <?php  
+
+                      if(isset($_SESSION['user_info']))
+                      {
+                        echo '<li class="nav-item">
+                        <a  class="nav-link" href="login.php"> '.$_SESSION['first_name']." ".$_SESSION['last_name'].'</a>
+                        </li>
+                        <li class="nav-item">
+                        <a  class="nav-link"  href="login.php?ac=logout">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                        <a  class="nav-link"  href="shopping.php">My cart</a>
+                        </li>';
+                      }
+                      else
+                        echo '<A  class="nav-item nav-link" HREF="login.php">Login</A>';
+                    ?>
+                  </div>
+                </div>
+              </nav>
+
+
+
+
+        <div class="jumbotron main-box" style="background-color: rgba(0,0,0,0.0);border:0px;">
                         <div class="row">
                             <div class="col-lg-12" style="font-family: 'Righteous', cursive;">
                                 <h1 class="display-4">Hungry? No more!</h1>
@@ -39,7 +77,7 @@
         </div>
     </div>
 
-    <div class="col-lg-5 index-pic" style="background-image:url('img/background-main2.jpg');background-size:cover;">
+    <div class="col-lg-5 index-pic" style="background-image:linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)),url('img/test2.jpg');background-size:cover;">
                                
         </div>
     </div>

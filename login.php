@@ -70,27 +70,16 @@ if(isset($_POST['']))
 
         session_unset();
         session_destroy();
+        $red = 'index.php';
+        echo"<script>window.location.href='$red'</script>";
 
 	}
 ?>
 <?php if(isset($_SESSION['user_info']))	{
-$_SESSION['userName'] = 'Root';		$_COOKIE['varname'] = 9;	?>
-	    <form id="login-form" class="login-form" name="form1" method="post" action="login.php">
-
-	        <div id="form-content">
-	            <div class="welcome">
-					Welcome, you are logged in. 
-                    <br />
-					Thank you for choosing us.
-					<br />
-					<center><a href="shopping.php" style="color:#3ec038">Place an order</a></center>
-					<center><a href="user.php" style="color:#3ec038">Change password</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="deact.php" style="color:#3ec038">Deactivate your account</a></center><br /><br/>
-					<section align="right"><a href="login.php?ac=logout" style="color:#3ec038">Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</section>
-				</div>	
-	        </div>
-	    </form>
-	<?php } else { ?>
+$_SESSION['userName'] = 'Root';		$_COOKIE['varname'] = 9;
+        $ref = 'user.php';
+       echo"<script>window.location.href='$ref'</script>";
+        } else { ?>
 
 
               <div class="row">
