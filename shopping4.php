@@ -39,21 +39,26 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/shop.js"></script>
   <link rel="stylesheet" href="css/shop.css">
-  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_zLYEHwclnOA5WxGO2J9DO");
+   })();
+</script>  
 
  
 </head>
 <body style="background:rgb(181, 181, 181);">
     
     
-    <form action="shopping.php" name="orderform" method="post">
+    <form action="shopping4.php" name="orderform" method="post">
     <div class="container">
 
         <section id="cart"> 
             <article class="product">
                 <header>
                     <a class="remove">
-                        <img src="img/dosa.jpg" alt="dosa">
+                        <img src="img/fiola.jpg" alt="dosa">
 
                         <h3>Remove Item</h3>
                     </a>
@@ -61,9 +66,9 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
 
                 <div class="content">
 
-                    <h1>Masala Dosa</h1>
+                    <h1>Fiola da Fabio Tribocchi</h1>
 
-                    Crisp dosa served with hot delicious potato masala and the mouth watering South Indian Chutney. Slurp!
+                    Shaved Matsutake Mushrooms, Duck Egg Emulsion, Porcini Crema.
 
                     <div title="This item is 100% vegetarian!" style="top: 0" class="color green"></div>
                     <div style="top: 43px" class="type small">M</div>
@@ -71,7 +76,7 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
 
                 <footer class="content">
                     <span class="qt-minus">-</span>
-                    <span class="qt" name = "qty1">0</span>
+                    <input type="text" class="qt" name = "qty1" value=0>
                     <span class="qt-plus">+</span>
 
                     <h2 class="full-price">
@@ -79,7 +84,7 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
                     </h2>
 
                     <h2 class="price">
-                        144.99&#8377;
+                        344.99&#8377;
                     </h2>
                 </footer>
             </article>
@@ -87,7 +92,7 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
             <article class="product">
                 <header>
                     <a class="remove">
-                        <img src="img/idli.jpg" alt="Belgian choco chip milkshake">
+                        <img src="img/sfoglina.jpg" alt="Belgian choco chip milkshake">
 
                         <h3>Remove Item</h3>
                     </a>
@@ -95,9 +100,9 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
 
                 <div class="content">
 
-                    <h1>Idli</h1>
+                    <h1>Sfoglina</h1>
 
-                    Fluffy white Idli or like the natives call it Mallige Idli. Served with bisi bisi sambar and South Indian green chutney.
+                    Charred Radicchio, Cippolini Agrodolce, Preserved Huckleberry & Lagavulin 16, Pumpkin Seeds.
 
                     <div title="This item is 100% vegetarian!" style="top: 0" class="color green"></div>
                     <div style="top: 43px" class="type small">L</div>
@@ -114,14 +119,14 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
                     </h2>
 
                     <h2 class="price">
-                        30.99&#8377;
+                        340.99&#8377;
                     </h2>
                 </footer>
             </article>
             <article class="product">
                 <header>
                     <a class="remove">
-                        <img src="img/paratha.jpg" alt="Belgian choco chip milkshake">
+                        <img src="img/sweet.jpg" alt="Belgian choco chip milkshake">
 
                         <h3>Remove Item</h3>
                     </a>
@@ -129,9 +134,9 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
 
                 <div class="content">
 
-                    <h1>Paratha</h1>
+                    <h1>CASTAGNE E CAFFE</h1>
 
-                    North Indian butter paratha with aloo filling. Served with green chutney, pickle and chilli and thick curd.
+                    Caffe Borghetti & Chestnut Creme Anglaise, 66% Caribe Chocolate Shell, Torched Meyer Lemon, Marron Glace Gelato
 
                     <div title="This item is 100% vegetarian!" style="top: 0" class="color green"></div>
                     <div style="top: 43px" class="type small">L</div>
@@ -148,7 +153,7 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
                     </h2>
 
                     <h2 class="price">
-                        40.99&#8377;
+                        470.99&#8377;
                     </h2>
                 </footer>
             </article>
@@ -157,7 +162,7 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
             <article class="product">
                 <header>
                     <a class="remove">
-                        <img src="img/chicken.jpg" alt="">
+                        <img src="img/spag.jpg" alt="">
 
                         <h3>Remove Item</h3>
                     </a>
@@ -165,9 +170,9 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
 
                 <div class="content">
 
-                    <h1>Chicken Biriyani</h1>
+                    <h1>FOIE GRAS PARFAIT</h1>
 
-                    Hyderabad Nawabi style biriyani. Need I say more?
+                    Mountain Rose Apples, Celery, Pine Nut Sablé
 
                     <div title="This item is non-vegetarian!" style="top: 0" class="color red"></div>
                     <div title="Half plate"  style="top: 43px" class="type small">S</div>
@@ -184,7 +189,7 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
                     </h2>
 
                     <h2 class="price">
-                        200.99&#8377;
+                        500.99&#8377;
                     </h2>
                 </footer>
             </article>
@@ -260,7 +265,7 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
             <article class="product">
                 <header>
                     <a class="remove">
-                        <img src="img/meals.jpg" alt="Belgian choco chip milkshake">
+                        <img src="img/pallotte.jpg" alt="Belgian choco chip milkshake">
 
                         <h3>Remove Item</h3>
                     </a>
@@ -268,10 +273,9 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
 
                 <div class="content">
 
-                    <h1>South Indian Meals</h1>
+                    <h1>Pallotte cacio e uavio</h1>
 
-                    South Indian meal includes rice, chapathi, rasam, sambar, curd, palya, 3 different sides, papad and pickle.
-
+                    Organic Baby Vegetables & Lettuces, Almond Emulsion, Black Truffle Dressing
                     <div title="This item is 100% vegetarian!" style="top: 0" class="color green"></div>
                     <div style="top: 43px" class="type small">L</div>
                 </div>
@@ -287,7 +291,7 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
                     </h2>
 
                     <h2 class="price">
-                        57.99&#8377;
+                        347.99&#8377;
                     </h2>
                 </footer>
             </article>
@@ -302,7 +306,7 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
 
                 <div class="content">
 
-                    <h1>Chocolate Milkshake</h1>
+                    <h1>Cocolatee Milsakee</h1>
 
                     Freshly prepared thick chocolate milkshake. The perfect dessert! 
 
@@ -321,7 +325,7 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
                     </h2>
 
                     <h2 class="price">
-                        50.99&#8377;
+                        150.99&#8377;
                     </h2>
                 </footer>
             </article>

@@ -63,7 +63,7 @@
                                 <p>Join Bengaluru's biggest food community and get hassle free delivery to your doorstep.</p>
                                 <p class="lead">
                                     <?php if(isset($_SESSION['user_info']))
-                                        echo "<a class='btn btn-success btn-lg' href='shopping.php' role='button' style='background-color: rgb(250, 91, 38);border:0px;'>Order now!</a>
+                                        echo "<a class='btn btn-success btn-lg' href='hotels.php' role='button' style='background-color: rgb(250, 91, 38);border:0px;'>Order now!</a>
                                 </p>";
                                 else
                                 echo "<a class='btn btn-success btn-lg' href='login.php' role='button' style='background-color: rgb(250, 91, 38);border:0px;'>Order now!</a>

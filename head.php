@@ -34,7 +34,7 @@
              <a  class="nav-link"  href="login.php?ac=logout">Logout</a>
             </li>
             <li class="nav-item">
-             <a  class="nav-link"  href="shopping.php">Cart</a>
+             <a  class="nav-link"  href="hotels.php">Order</a>
             </li>
         </ul>
     </div>';

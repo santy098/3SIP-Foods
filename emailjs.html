@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init("user_zLYEHwclnOA5WxGO2J9DO");
+        })();
+     </script> 
+     <script>
+     function email(){
+        var templateParams = {
+    name: 'Santy',
+    notes: 'Check this out!'
+};
+ 
+emailjs.send('gmail', 'template_zNzKlXVi', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+     } 
+     
+     </script>
+</head>
+<body>
+    <button onclick="email()">Email</button>
+</body>
+</html>

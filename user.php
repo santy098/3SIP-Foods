@@ -51,7 +51,7 @@ button{
       echo"<p class='title'>".$_SESSION['user_info']."</p>";
       echo"<p class='title'>".$_SESSION['addr']."</p>";
       echo"<h3>".$_SESSION['mob']."</h3><br></div><div class='col-lg-5'><br><br><br>";
-      echo"<a href='shopping.php'><button>My orders</button></a><br><br>";
+      echo"<a href='hotels.php'><button>Order Now</button></a><br><br>";
       echo"<a href='changepw.php'><button>Change Password</button></a><br><br>";
       echo"<a href='deact.php'><button>Deactivate</button></a><br>";
       echo"<br><br></div>";
