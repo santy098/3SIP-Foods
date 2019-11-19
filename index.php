@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300|PT+Serif:700|Playfair+Display|Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -54,19 +55,19 @@
 
 
 
-        <div class="jumbotron main-box" style="background-color: rgba(0,0,0,0.0);border:0px;">
+        <div class="jumbotron main-box" style="background-color: rgba(0,0,0,0.0);border:0px;font-family:'Fira Sans', sans-serif">
                         <div class="row">
                             <div class="col-lg-12" >
-                                <h1 class="display-4"  style="font-family: 'Righteous', cursive;">Hungry? No more!</h1>
-                                <p class="lead"  style="font-family: 'Righteous', cursive;">Your favourite food, delivered with love.</p><br><br>
+                                <h1 class="display-4"  style="font-family: 'Fira Sans', cursive;">Hungry? No more!</h1>
+                                <p class="lead"  style="font-family: 'Fira Sans', sans-serif;">Your favourite food, delivered with love.</p><br><br>
                                 <hr class="my-4">
-                                <p>Join Bengaluru's biggest food community and get hassle free delivery to your doorstep.</p>
+                                <p style="font-family: 'Fira Sans', sans-serif;">Join Bengaluru's biggest food community and get hassle free delivery to your doorstep.</p>
                                 <p class="lead">
                                     <?php if(isset($_SESSION['user_info']))
-                                        echo "<a class='btn btn-success btn-lg' href='hotels.php' role='button' style='background-color: rgb(250, 91, 38);border:0px;'>Order now!</a>
+                                        echo "<a class='btn btn-success btn-lg' href='hotels.php' role='button' style='background-color: rgb(250, 91, 38);border:0px;font-family: 'Fira Sans', sans-serif;'>Order now!</a>
                                 </p>";
                                 else
-                                echo "<a class='btn btn-success btn-lg' href='login.php' role='button' style='background-color: rgb(250, 91, 38);border:0px;'>Order now!</a>
+                                echo "<a class='btn btn-success btn-lg' href='login.php' role='button' style='background-color: rgb(250, 91, 38);border:0px;font-family: 'Fira Sans', sans-serif;'>Order now!</a>
                                 </p>";
                                 ?>
 
@@ -87,18 +88,18 @@
               
               <section class="section-features" id="features" style="color:white">
                                                                 
-                                                                <div class="row">
+                                                                <div>
                                                                   <center>
                                                                     <h2>Get food fast &mdash; not fast food.</h2>
-                                                                    <p class="long-copy">
-                                                                        Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!
+                                                                    <p>
+                                                                        Hello, we’re 3SIP Foods, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!
                                                                     </p>
                                                                     </center>
                                                                 </div>
                                                     
-                                                            <div class="row js--wp-1">
-                                                                <div class="col-lg-3 box">
-                                                                    <i class="ion-ios-infinite-outline icon-big"></i>
+                                                            <div class="row">
+                                                                <div class="col-lg-3 box" style="background-color:lightgray;color:black;">
+                                                                <ion-icon class="fb" name="logo-facebook"></ion-icon>
                                                                 <h3>Up to 365 days/year</h3>
                                                                     <p>
                                                                     Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.</p>
@@ -106,24 +107,24 @@
                                                                 </div>
                                                     
                                                     
-                                                                <div class="col-lg-3 box">
-                                                                <i class="ion-ios-stopwatch-outline icon-big"></i>
+                                                                <div class="col-lg-3 box" style="background-color:white;color:black;">
+                                                                <ion-icon class="fb" name="logo-facebook"></ion-icon>
                                                                 <h3>Ready in 20 minutes</h3>
                                                                     <p>
                                                                     You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.</p>
                                                     
                                                                 </div>
                                                     
-                                                                <div class="col-lg-3 box">
-                                                                <i class="ion-ios-nutrition-outline icon-big"></i>
+                                                                <div class="col-lg-3 box" style="background-color:lightgray;color:black;">
+                                                                <ion-icon class="fb" name="logo-facebook"></ion-icon>
                                                                 <h3>100% organic</h3>
                                                                     <p>
                                                                     All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!</p>
                                                     
                                                                 </div>
                                                     
-                                                                  <div class="col-lg-3 box">
-                                                                      <i class="ion-ios-cart-outline icon-big"></i>
+                                                                  <div class="col-lg-3 box" style="background-color:white;color:black;">
+                                                                  <ion-icon class="fb" name="logo-facebook"></ion-icon> 
                                                                       <h3>Order anything</h3>                    
                                                                     <p>
                                                                     We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!</p>

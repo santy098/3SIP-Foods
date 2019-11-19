@@ -16,7 +16,7 @@ if (isset($_POST['submit'])){
 		$msg="Order placed successfully. Please make a payment of Rs ".$total." by cash on successful delivery";
 		$connection = mysqli_connect("localhost","root","","foodies") or die ('Unable to connect to MySQL server.<br ><br >Please make sure your MySQL login details are correct.');
 		
-$sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VALUES('$user_info','$qty1','$qty2','$qty3','$qty4','$qty5','$qty6','$qty7','$qty8','$qty9');";
+$sql1="INSERT INTO orders(email,hotel,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VALUES('$user_info','$qty1','$qty2','$qty3','$qty4','$qty5','$qty6','$qty7','$qty8','$qty9');";
 		if(mysqli_query($connection,$sql1))
 		{  
 			echo '<script type="text/javascript"> alert("'.$msg.'")</script>';
@@ -52,6 +52,7 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
     
     
     <form action="shopping3.php" name="orderform" method="post">
+        <input type="hidden" name="hotel" value="Burger King">
     <div class="container">
 
         <section id="cart"> 

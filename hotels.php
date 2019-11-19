@@ -19,6 +19,7 @@
     </style>
 </head>
 <body style="background-color:lightgrey;">
+<div style="max-height:100vh">
     <br><br><br>
     <div class="row">
         <div class="col-lg-6">
@@ -44,5 +45,6 @@
             </figure>
         </div>
     </div>
+</div>
 </body>
 </html>

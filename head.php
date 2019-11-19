@@ -28,7 +28,7 @@
                         echo ' <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
                         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-            <a  class="nav-link" style="margin-left:1000px" href="login.php"> '.$_SESSION['last_name'].'</a>
+            <a  class="nav-link" style="margin-left:1000px" href="login.php"> '.$_SESSION['first_name'].'</a>
             </li>
             <li class="nav-item">
              <a  class="nav-link"  href="login.php?ac=logout">Logout</a>

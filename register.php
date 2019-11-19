@@ -19,24 +19,25 @@ if (isset($_POST['submit']))
   $sql = "INSERT INTO user VALUES ('$fname', '$lname', '$location', '$mob', '$addr', '$email', '$pw', '$cpw');";
     if(mysqli_query($conn, $sql))
     {  
-    $message = "You have been successfully registered";
+      $message = "You have been successfully registered";
+      $sql1 = "INSERT INTO php_users_login(`email`, `password`) VALUES ('$email', '$pw');";
+      if(mysqli_query($conn, $sql1))
+        {  
+          $message1 = "Added in login table";
+        
+        }
+      else
+        {  
+          $message1 = "Could not insert record";
+        }	 
+      echo "<script type='text/javascript'>alert('$message');</script>";
     }
     else
     {  
-    $message = "Could not insert record"; 
+      echo "<script type='text/javascript'>alert('User already Exists!');</script>";
     }
-    echo "<script type='text/javascript'>alert('$message');</script>";
-    $sql1 = "INSERT INTO php_users_login(`email`, `password`) VALUES ('$email', '$pw');";
-    if(mysqli_query($conn, $sql1))
-    {  
-      $message1 = "Added in login table";
-     
-    }
-    else
-    {  
-      $message1 = "Could not insert record";
-    }	 
-    echo "<script type='text/javascript'>alert('$message1');</script>";
+    
+    
     
 }
 ?>
@@ -65,7 +66,7 @@ if (isset($_POST['submit']))
 	var addr=document.getElementById("addr");
 	var pw=document.getElementById("pw");
 	var cpw=document.getElementById("cpw");
-	var alphaExp = /^[a-zA-Z]+$/;
+	var alphaExp = /^[a-zA-Z ]+$/;
 	var atpos = EmailId.value.indexOf("@");
     var dotpos = EmailId.value.lastIndexOf(".");
  	if(pw.value.length< 8 || cpw.value.length< 8)
@@ -191,7 +192,7 @@ if (isset($_POST['submit']))
                                     </div>
                                     <div class="form-group col-md-6">
                                       <label for="inputCity">Mobile</label>
-                                      <input type="text" class="form-control" id="mob" name="mob" placeholder="E-mail">
+                                      <input type="text" class="form-control" id="mob" name="mob" placeholder="Mobile number">
                                     </div>
                                   </div>
                                   <div class="row">

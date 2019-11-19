@@ -76,7 +76,7 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
 
                 <footer class="content">
                     <span class="qt-minus">-</span>
-                    <input type="text" class="qt" name = "qty1" value=0>
+                    <span class="qt" name = "qty1">0</span>
                     <span class="qt-plus">+</span>
 
                     <h2 class="full-price">
@@ -84,7 +84,7 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
                     </h2>
 
                     <h2 class="price">
-                        144.99&#8377;
+                        44.99&#8377;
                     </h2>
                 </footer>
             </article>
