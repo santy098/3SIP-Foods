@@ -56,7 +56,7 @@ window.setTimeout(
 });
 
 $(".qt-plus").click(function(){
-$(this).parent().children(".qt").html(parseInt($(this).parent().children(".qt").html()) + 1);
+$(this).parent().children(".qt").val(parseInt($(this).parent().children(".qt").html()) + 1);
 
 $(this).parent().children(".full-price").addClass("added");
 
