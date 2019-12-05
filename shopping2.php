@@ -12,11 +12,13 @@ if (isset($_POST['submit'])){
 		$qty8=$_POST['qty8'];
         $qty9=$_POST['qty9'];
         $total = $_POST['total'];
+        $hotel=$_POST['hotel'];
+        
 		$user_info=$_SESSION['user_info'];
 		$msg="Order placed successfully. Please make a payment of Rs ".$total." by cash on successful delivery";
 		$connection = mysqli_connect("localhost","root","","foodies") or die ('Unable to connect to MySQL server.<br ><br >Please make sure your MySQL login details are correct.');
 		
-$sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VALUES('$user_info','$qty1','$qty2','$qty3','$qty4','$qty5','$qty6','$qty7','$qty8','$qty9');";
+$sql1="INSERT INTO orders(email,hotel,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VALUES('$user_info','$hotel','$qty1','$qty2','$qty3','$qty4','$qty5','$qty6','$qty7','$qty8','$qty9');";
 		if(mysqli_query($connection,$sql1))
 		{  
 			echo '<script type="text/javascript"> alert("'.$msg.'")</script>';
@@ -52,6 +54,7 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
     
     
     <form action="shopping2.php" name="orderform" method="post">
+    
     <div class="container">
 
         <section id="cart"> 
@@ -76,7 +79,8 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
 
                 <footer class="content">
                     <span class="qt-minus">-</span>
-                    <input type="text" class="qt" name = "qty1" value="0" style="border:0px" disabled/>
+                    <span class="qt">0</span>
+                    <input type="hidden" value = "0" class="post" name="qty1">
                     <span class="qt-plus">+</span>
 
                     <h2 class="full-price">
@@ -111,7 +115,8 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
                 <footer class="content">
                     
                     <span class="qt-minus">-</span>
-                    <span class="qt" name = "qty3">0</span>
+                    <span class="qt">0</span>
+                    <input type="hidden" value = "0" class="post" name="qty2">
                     <span class="qt-plus">+</span>
 
                     <h2 class="full-price">
@@ -145,7 +150,8 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
                 <footer class="content">
                     
                     <span class="qt-minus">-</span>
-                    <span class="qt" name = "qty4">0</span>
+                    <span class="qt">0</span>
+                    <input type="hidden" value = "0" class="post" name="qty3">
                     <span class="qt-plus">+</span>
 
                     <h2 class="full-price">
@@ -176,12 +182,13 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
 
                     <div title="This item is non-vegetarian!" style="top: 0" class="color red"></div>
                     <div title="Half plate"  style="top: 43px" class="type small">S</div>
-                </div>
+                </div>  
 
                 <footer class="content">
                     
                     <span class="qt-minus">-</span>
-                    <span class="qt" name = "qty2">0</span>
+                    <span class="qt">0</span>
+                    <input type="hidden" value = "0" class="post" name="qty4">
                     <span class="qt-plus">+</span>
 
                     <h2 class="full-price">
@@ -216,7 +223,8 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
                 <footer class="content">
                     
                     <span class="qt-minus">-</span>
-                    <span class="qt" name = "qty5">0</span>
+                    <span class="qt">0</span>
+                    <input type="hidden" value = "0" class="post" name="qty5">
                     <span class="qt-plus">+</span>
 
                     <h2 class="full-price">
@@ -250,7 +258,8 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
                 <footer class="content">
                     
                     <span class="qt-minus">-</span>
-                    <span class="qt" name = "qty6">0</span>
+                    <span class="qt">0</span>
+                    <input type="hidden" value = "0" class="post" name="qty6">
                     <span class="qt-plus">+</span>
 
                     <h2 class="full-price">
@@ -284,7 +293,8 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
                 <footer class="content">
                     
                     <span class="qt-minus">-</span>
-                    <span class="qt" name = "qty7">0</span>
+                    <span class="qt">0</span>
+                    <input type="hidden" value = "0" class="post" name="qty7">
                     <span class="qt-plus">+</span>
 
                     <h2 class="full-price">
@@ -318,7 +328,8 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
                 <footer class="content">
                     
                     <span class="qt-minus">-</span>
-                    <span class="qt" name = "qty8">0</span>
+                    <span class="qt">0</span>
+                    <input type="hidden" value = "0" class="post" name="qty8">
                     <span class="qt-plus">+</span>
 
                     <h2 class="full-price">
@@ -352,7 +363,8 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
                 <footer class="content">
                     
                     <span class="qt-minus">-</span>
-                    <span class="qt" name = "qty9">0</span>
+                    <span class="qt">0</span>
+                    <input type="hidden" value = "0" class="post" name="qty9">
                     <span class="qt-plus">+</span>
 
                     <h2 class="full-price">
@@ -381,6 +393,8 @@ $sql1="INSERT INTO orders(email,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VAL
 
             <div class="right">
                 <h1 class="total">Total: <span name="total"></span>&#8377;</h1>
+                <input type="hidden" value = "0" class="total-post" name="total">
+                <input type="hidden" value="Chilis" name="hotel">
                 <input type="submit" class="btn" value="Checkout" name ="submit">
             </div>
 

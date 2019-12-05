@@ -1,5 +1,3 @@
-
-
 var check = false;
 
 function changeVal(el) {
@@ -8,6 +6,9 @@ var price = parseFloat(el.parent().children(".price").html());
 var eq = Math.round(price * qt * 100) / 100;
 
 el.parent().children(".full-price").html( eq + "&#8377" );
+
+el.parent().children(".post").val(qt);
+
 
 changeTotal();            
 }
@@ -32,6 +33,8 @@ fullPrice = 0;
 $(".subtotal span").html(price);
 $(".tax span").html(tax);
 $(".total span").html(fullPrice);
+$(".total-post").val(fullPrice);
+
 }
 
 $(document).ready(function(){
@@ -56,7 +59,7 @@ window.setTimeout(
 });
 
 $(".qt-plus").click(function(){
-$(this).parent().children(".qt").val(parseInt($(this).parent().children(".qt").html()) + 1);
+$(this).parent().children(".qt").html(parseInt($(this).parent().children(".qt").html()) + 1);
 
 $(this).parent().children(".full-price").addClass("added");
 
@@ -85,5 +88,3 @@ check = true;
 $(".remove").click();
 });
 });
-
-

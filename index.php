@@ -15,7 +15,7 @@
 <body style="background-color:black;">
 
 <div class="row">
-    <div class="col-lg-7">
+    <div class="col-sm-7">
     
 
 
@@ -30,6 +30,7 @@
                     
                     <a class="nav-item nav-link" href="help.php">Help</a>
 
+                        
                                         
                     <?php  
 
@@ -57,7 +58,7 @@
 
         <div class="jumbotron main-box" style="background-color: rgba(0,0,0,0.0);border:0px;font-family:'Fira Sans', sans-serif">
                         <div class="row">
-                            <div class="col-lg-12" >
+                            <div class="col-sm-12" >
                                 <h1 class="display-4"  style="font-family: 'Fira Sans', cursive;">Hungry? No more!</h1>
                                 <p class="lead"  style="font-family: 'Fira Sans', sans-serif;">Your favourite food, delivered with love.</p><br><br>
                                 <hr class="my-4">
@@ -78,7 +79,7 @@
         </div>
     </div>
 
-    <div class="col-lg-5 index-pic" style="background-image:linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)),url('img/test2.jpg');background-size:cover;">
+    <div class="col-sm-5 index-pic" style="background-image:linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)),url('img/test2.jpg');background-size:cover;">
                                
         </div>
     </div>
@@ -98,7 +99,7 @@
                                                                 </div>
                                                     
                                                             <div class="row">
-                                                                <div class="col-lg-3 box" style="background-color:lightgray;color:black;">
+                                                                <div class="col-sm-3 box" style="background-color:lightgray;color:black;">
                                                                 <ion-icon class="fb" name="logo-facebook"></ion-icon>
                                                                 <h3>Up to 365 days/year</h3>
                                                                     <p>
@@ -107,7 +108,7 @@
                                                                 </div>
                                                     
                                                     
-                                                                <div class="col-lg-3 box" style="background-color:white;color:black;">
+                                                                <div class="col-sm-3 box" style="background-color:white;color:black;">
                                                                 <ion-icon class="fb" name="logo-facebook"></ion-icon>
                                                                 <h3>Ready in 20 minutes</h3>
                                                                     <p>
@@ -115,7 +116,7 @@
                                                     
                                                                 </div>
                                                     
-                                                                <div class="col-lg-3 box" style="background-color:lightgray;color:black;">
+                                                                <div class="col-sm-3 box" style="background-color:lightgray;color:black;">
                                                                 <ion-icon class="fb" name="logo-facebook"></ion-icon>
                                                                 <h3>100% organic</h3>
                                                                     <p>
@@ -123,7 +124,7 @@
                                                     
                                                                 </div>
                                                     
-                                                                  <div class="col-lg-3 box" style="background-color:white;color:black;">
+                                                                  <div class="col-sm-3 box" style="background-color:white;color:black;">
                                                                   <ion-icon class="fb" name="logo-facebook"></ion-icon> 
                                                                       <h3>Order anything</h3>                    
                                                                     <p>
