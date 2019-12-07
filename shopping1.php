@@ -25,7 +25,8 @@ if (isset($_POST['submit'])){
         $sql1="INSERT INTO orders(email,hotel,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9,AmountPayable)VALUES('$user_info','$hotel','$qty1','$qty2','$qty3','$qty4','$qty5','$qty6','$qty7','$qty8','$qty9','$total');";
 		if(mysqli_query($connection,$sql1))
 		{  
-			echo '<script type="text/javascript"> alert("'.$msg.'")</script>';
+            echo '<script type="text/javascript"> alert("'.$msg.'")</script>';
+            include('send_mail.php');
 		}
 		else
 		{  

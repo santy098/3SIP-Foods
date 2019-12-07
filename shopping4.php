@@ -25,7 +25,8 @@ if (isset($_POST['submit'])){
         $sql1="INSERT INTO orders(email,hotel,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9,AmountPayable)VALUES('$user_info','$hotel','$qty1','$qty2','$qty3','$qty4','$qty5','$qty6','$qty7','$qty8','$qty9','$total');";
 		if(mysqli_query($connection,$sql1))
 		{  
-			echo '<script type="text/javascript"> alert("'.$msg.'")</script>';
+            echo '<script type="text/javascript"> alert("'.$msg.'")</script>';
+            include('send_mail.php');
 		}
 		else
 		{  
@@ -49,11 +50,7 @@ if (isset($_POST['submit'])){
   <script src="js/shop.js"></script>
   <link rel="stylesheet" href="css/shop.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("user_zLYEHwclnOA5WxGO2J9DO");
-   })();
-</script>  
+  
 
  
 </head>
