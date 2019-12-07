@@ -12,13 +12,16 @@ if (isset($_POST['submit'])){
 		$qty8=$_POST['qty8'];
         $qty9=$_POST['qty9'];
         $total = $_POST['total'];
-        $hotel=$_POST['hotel'];
-        
+        if($total == 0){
+            echo '<script type="text/javascript"> alert("No items selected")</script>';
+        }
+        else{
+        $hotel = $_POST['hotel'];
 		$user_info=$_SESSION['user_info'];
 		$msg="Order placed successfully. Please make a payment of Rs ".$total." by cash on successful delivery";
 		$connection = mysqli_connect("localhost","root","","foodies") or die ('Unable to connect to MySQL server.<br ><br >Please make sure your MySQL login details are correct.');
 		
-$sql1="INSERT INTO orders(email,hotel,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9)VALUES('$user_info','$hotel','$qty1','$qty2','$qty3','$qty4','$qty5','$qty6','$qty7','$qty8','$qty9');";
+        $sql1="INSERT INTO orders(email,hotel,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9,AmountPayable)VALUES('$user_info','$hotel','$qty1','$qty2','$qty3','$qty4','$qty5','$qty6','$qty7','$qty8','$qty9','$total');";
 		if(mysqli_query($connection,$sql1))
 		{  
 			echo '<script type="text/javascript"> alert("'.$msg.'")</script>';
@@ -26,12 +29,15 @@ $sql1="INSERT INTO orders(email,hotel,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qt
 		else
 		{  
 			echo "<script type='text/javascript'>alert('Could not place order');</script>";
-		} 
-	}
+        } 
+        
+        }
+    }
 	else
 		echo "<script type='text/javascript'>alert('Please login');</script>";
 }
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -52,7 +58,10 @@ $sql1="INSERT INTO orders(email,hotel,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qt
 </head>
 <body style="background:rgb(181, 181, 181);">
     
-    
+<div class="page-header">
+    <center><h1>Chilis South Indian</h1></center>
+    </div>
+
     <form action="shopping2.php" name="orderform" method="post">
     
     <div class="container">

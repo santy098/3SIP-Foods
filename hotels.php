@@ -19,6 +19,11 @@
     </style>
 </head>
 <body style="background-color:lightgrey;">
+
+<div class="page-header">
+    <center><h1>Our Restaurants</h1></center>
+    </div>
+
 <div style="max-height:100vh">
     <br><br><br>
     <div class="row">

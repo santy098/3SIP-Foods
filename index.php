@@ -16,8 +16,6 @@
 
 <div class="row">
     <div class="col-sm-7">
-    
-
 
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(0, 0, 0);">
                 <a class="navbar-brand" href="index.php"><img src="img/3sip_Ologo.png" style="height: 100px;width: 100px;" alt=""></a>
@@ -30,8 +28,8 @@
                     
                     <a class="nav-item nav-link" href="help.php">Help</a>
 
-                        
-                                        
+
+
                     <?php  
 
                       if(isset($_SESSION['user_info']))
@@ -52,10 +50,7 @@
                   </div>
                 </div>
               </nav>
-
-
-
-
+              
         <div class="jumbotron main-box" style="background-color: rgba(0,0,0,0.0);border:0px;font-family:'Fira Sans', sans-serif">
                         <div class="row">
                             <div class="col-sm-12" >
