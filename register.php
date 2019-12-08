@@ -16,7 +16,7 @@ if (isset($_POST['submit']))
   $email=$_POST['email'];
   $pw=$_POST['pw'];
   $cpw=$_POST['cpw'];
-  $sql = "INSERT INTO user VALUES ('$fname', '$lname', '$location', '$mob', '$addr', '$email', '$pw', '$cpw');";
+  $sql = "INSERT INTO user VALUES ('$fname', '$lname', '$location', '$mob', '$addr', '$email', '$pw');";
     if(mysqli_query($conn, $sql))
     {  
       $message = "You have been successfully registered";
@@ -152,7 +152,6 @@ if (isset($_POST['submit']))
 	{
        return false;
     }
-    var survey=prompt("How did you hear about us? (Used only for survey)");
 	return true;
 }
 

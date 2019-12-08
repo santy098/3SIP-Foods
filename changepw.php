@@ -17,12 +17,7 @@
                             <form class="form col-lg-12" style="color: white;" id="login-form" class="login-form" name="form1" method="post" action="changepw.php">
                             
                                 <p style="font-size: 28px;" class="card-title">Change Password</p>
-                                <div class="form-group row" style="margin-top:30px;" >
-                                <label class="control-label col-lg-4" for="email">Email</label>
-                                <div class="col-lg-8">
-                                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
-                                </div>
-                                </div>
+                                
                                 <div class="form-group row">
                                 <label class="control-label col-sm-4" for="pwd">Current password</label>
                                 <div class="col-sm-8">
@@ -55,7 +50,7 @@
 $connect = mysqli_connect("localhost","root","","foodies");
 
 if (isset($_POST['changepw'])){
-$email=$_POST['email'];
+$email=$_SESSION['user_info'];
 $opw=$_POST['opw'];
 $npw=$_POST['npw'];
 $query = mysqli_query($connect,"select * from php_users_login where email='$email'");
@@ -70,9 +65,12 @@ $dbpassword = $row['password'];
 if($dbemail==$email&&$opw==$dbpassword)
 {
 		$sql2 ="UPDATE 	php_users_login SET password= '$npw' WHERE email= '$dbemail';";
-		if(mysqli_query($connect,$sql2))
+		$sql3 ="UPDATE 	user SET pw = '$npw' WHERE email= '$dbemail';";
+		if(mysqli_query($connect,$sql2) && mysqli_query($connect,$sql3))
 		{  
-			echo "<script type='text/javascript'>alert('Password changed successfully');</script>";
+            echo "<script type='text/javascript'>alert('Password changed successfully');</script>";
+            echo "<script type='text/javascript'>window.location.assign('login.php?ac=logout')</script>";
+            
 		}
 		else
 		{  

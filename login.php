@@ -40,6 +40,13 @@ if(isset($_POST['']))
 
 
 <?php
+    if(isset($_GET['ac']) && $_GET['ac'] == 'logout'){
+        session_unset();
+        session_destroy();
+        $red = 'index.php';
+        echo"<script>window.location.href='$red'</script>";
+    }
+    
 	$error = '';
 	if(isset($_POST['is_login'])){
     
@@ -66,14 +73,7 @@ if(isset($_POST['']))
     }
     mysqli_close($connection);
 	}
-	if(isset($_GET['ac']) && $_GET['ac'] == 'logout'){
-
-        session_unset();
-        session_destroy();
-        $red = 'index.php';
-        echo"<script>window.location.href='$red'</script>";
-
-	}
+	
 ?>
 <?php if(isset($_SESSION['user_info']))	{
 $_SESSION['userName'] = 'Root';		$_COOKIE['varname'] = 9;
@@ -101,13 +101,7 @@ $_SESSION['userName'] = 'Root';		$_COOKIE['varname'] = 9;
                                     <input type="password" name="password" class="form-control" id="pwd" placeholder="Enter password">
                                 </div>
                                 </div>
-                                <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-8">
-                                    <div class="checkbox">
-                                    <label><input type="checkbox"> Remember me</label>
-                                    </div>
-                                </div>
-                                </div>
+
                                 <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <button type="submit" style="width: 100px;background-color: rgb(250, 91, 38);border: 0px;" class="btn btn-success">Log In</button>

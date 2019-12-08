@@ -20,8 +20,6 @@ if (isset($_POST['submit'])){
 		$user_info=$_SESSION['user_info'];
 		$msg="Order placed successfully. Please make a payment of Rs ".$total." by cash on successful delivery";
 		$connection = mysqli_connect("localhost","root","","foodies") or die ('Unable to connect to MySQL server.<br ><br >Please make sure your MySQL login details are correct.');
-        echo '<script type="text/javascript"> alert("'.$hotel.'")</script>';
-
         $sql1="INSERT INTO orders(email,hotel,qty1,qty2,qty3,qty4,qty5,qty6,qty7,qty8,qty9,AmountPayable)VALUES('$user_info','$hotel','$qty1','$qty2','$qty3','$qty4','$qty5','$qty6','$qty7','$qty8','$qty9','$total');";
 		if(mysqli_query($connection,$sql1))
 		{  
@@ -50,12 +48,17 @@ if (isset($_POST['submit'])){
   <script src="js/shop.js"></script>
   <link rel="stylesheet" href="css/shop.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("user_zLYEHwclnOA5WxGO2J9DO");
-   })();
-</script>  
-
+ 
+  <script type="text/javascript">
+    function confirmation(){
+    var r = confirm("Do you want to place order?");
+    if(r==true){
+        return true;
+    }
+    else
+    return false;
+}  
+</script>
  
 </head>
 <body style="background:rgb(181, 181, 181);">
@@ -63,7 +66,7 @@ if (isset($_POST['submit'])){
     <div class="page-header">
     <center><h1>Tango's Mediteranean Restaurant</h1></center>
     </div>
-    <form action="shopping1.php" name="orderform" method="post">
+    <form action="shopping1.php" name="orderform" method="post" onsubmit="return confirmation()">
     <div class="container">
 
         <section id="cart"> 

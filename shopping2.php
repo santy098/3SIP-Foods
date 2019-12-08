@@ -50,7 +50,16 @@ if (isset($_POST['submit'])){
   <link rel="stylesheet" href="css/shop.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
   
-
+  <script type="text/javascript">
+function confirmation(){
+    var r = confirm("Do you want to place order?");
+    if(r==true){
+        return true;
+    }
+    else
+    return false;
+}
+</script>
  
 </head>
 <body style="background:rgb(181, 181, 181);">
@@ -59,7 +68,7 @@ if (isset($_POST['submit'])){
     <center><h1>Chilis South Indian</h1></center>
     </div>
 
-    <form action="shopping2.php" name="orderform" method="post">
+    <form action="shopping2.php" name="orderform" method="post" onsubmit="return confirmation()">
     
     <div class="container">
 

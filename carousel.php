@@ -25,29 +25,53 @@
     <li data-target="#demo" data-slide-to="0" class="active"></li>
     <li data-target="#demo" data-slide-to="1"></li>
     <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+    <li data-target="#demo" data-slide-to="4"></li>
+    <li data-target="#demo" data-slide-to="5"></li>
   </ul>
   
   <!-- The slideshow -->
   <div class="carousel-inner" style="left:15%;">
     <div class="carousel-item active">
-      <img src="img/1-min.jpg" alt="Los Angeles" width="1100" height="500">
+      <img src="img/tg.png" alt="Los Angeles" width="1100" height="500">
       <div class="carousel-caption">
-    <h3>Los Angeles</h3>
-    <p>We had such a great time in LA!</p>
+    <h3>Tangos's Mediterranean Restaurant</h3>
+    <p>3rd block, Koramangala</p>
   </div>
     </div>
     <div class="carousel-item">
-      <img src="img/2-min.jpg" alt="Chicago" width="1100" height="500">
+      <img src="img/ab.png" alt="Chicago" width="1100" height="500">
       <div class="carousel-caption">
-    <h3>Los Angeles</h3>
-    <p>We had such a great time in LA!</p>
+    <h3>Arby's Cafe</h3>
+    <p>15th main, Indiranagar</p>
   </div>
     </div>
     <div class="carousel-item">
-      <img src="img/3-min.jpg" alt="New York" width="1100" height="500">
+      <img src="img/sw.png" alt="New York" width="1100" height="500">
       <div class="carousel-caption">
-    <h3>Los Angeles</h3>
-    <p>We had such a great time in LA!</p>
+    <h3>Subway</h3>
+    <p>Nearest outlets</p>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/7-min.jpg" alt="New York" width="1100" height="500">
+      <div class="carousel-caption">
+    <h3>Burgers</h3>
+    <p>@Tangos's</p>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/2-min.jpg" alt="New York" width="1100" height="500">
+      <div class="carousel-caption">
+    <h3>Pizzas</h3>
+    <p>@Fabio Tribocchi</p>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/4-min.jpg" alt="New York" width="1100" height="500">
+      <div class="carousel-caption">
+    <h3>South Indian</h3>
+    <p>@Chilis</p>
   </div>
     </div>
   </div>
